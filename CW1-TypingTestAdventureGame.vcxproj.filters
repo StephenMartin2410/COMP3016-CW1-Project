@@ -23,5 +23,8 @@
     <Text Include="Story.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="Start.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
