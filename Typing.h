@@ -5,12 +5,14 @@
 #include <windows.h>
 using namespace std;
 
-class TypingInstance {
+class GameInstance {
 
 private:
 	bool start = false;
 	char currentInput;
 	int storyLine = 0;
+	string line;
+	string typingLine;
 	
 public:
 	bool endGame = 0;
@@ -40,17 +42,35 @@ public:
 	}
 	int outputStory() {
 		ifstream storyFile("Story.txt");
-		string line;
 		int linenumber = 0;
 		while (getline(storyFile, line)) {
 			
 			if (storyLine == linenumber) {
-				cout << line;
+				cout << line << endl;
+				typingLine = line;
 			}
 			 linenumber++;
 		}
 
-		endGame = true;
+		storyLine++;
+		return 0;
+	}
+	int typeTest() {
+		for (int i = 0; i < typingLine.length(); i++) {
+			// cout << typingLine[i] << endl;
+			typingScore(i);
+		}
+
+		return 0;
+	}
+	int typingScore(int i) {
+		currentInput = _getch();
+		if (typingLine[i] == currentInput) {
+			cout << "Yes";
+		}
+
+
+
 		return 0;
 	}
 

@@ -21,11 +21,16 @@ int main()
         };
     };
     startFile.close();
-    TypingInstance startGame;
+    GameInstance startGame;
     while (1) {
         startGame.startGame();
         startGame.outputStory();
+        startGame.typeTest();
 
+
+
+
+        startGame.endGame = true;
         if (startGame.endGame == true) {
             break;
         }
