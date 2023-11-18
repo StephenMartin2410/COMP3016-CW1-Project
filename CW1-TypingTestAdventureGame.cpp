@@ -1,8 +1,11 @@
 ﻿#include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 #include "Typing.h"
 using namespace std;
+
+
 int main()
 {
     string line;
@@ -30,7 +33,7 @@ int main()
 
 
 
-        startGame.endGame = true;
+        //startGame.endGame = true;
         if (startGame.endGame == true) {
             break;
         }
