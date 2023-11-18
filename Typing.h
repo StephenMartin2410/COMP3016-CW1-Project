@@ -9,6 +9,7 @@ using namespace std;
 class GameInstance {
 
 private:
+
 	bool start = false;
 	char currentInput;
 	int storyLine = 0;
@@ -17,16 +18,17 @@ private:
 	string typingLine;
 	
 public:
+
 	bool endGame = 0;
 	void rules() {
 		if (start == true) {
 			system("cls");
 			cout << "Here are the rules of the game:" << endl;
 			cout << "This is a typing adventure game in which your typing score" << endl
-				<< "will impact the decisions you make througout the story. " << endl
-				<< "For example, if you were to score very badly in a battle with a monster" << endl
-				<< "then the monster may kill or badly injure you and you'll lost health points." << endl
-				<< "But if you were to score perfectly on the typing, then the monster will be slain." << endl
+				<< "will impact the decisions you make througout the story.         " << endl
+				<< "For example, if you were to score very badly in a situation then" << endl
+				<< "the outcome will be worse and may impact the story in a negative way." << endl
+				<< "But if you were to score perfectly on the typing, then the outcome may be positive." << endl
 				<< "Have Fun!\n\n";
 			}
 	}
@@ -41,6 +43,8 @@ public:
 
 		return 0;
 	}
+
+
 	int outputStory() {
 		ifstream storyFile("Story.txt");
 		int linenumber = 0;
@@ -60,6 +64,8 @@ public:
 		storyLine++;
 		return 0;
 	}
+
+
 	int typeTest() {
 		vector<bool> scoreCheck;
 		for (int y = 0; y < typingLine.length(); y++) {
