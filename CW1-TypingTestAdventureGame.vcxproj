@@ -130,6 +130,8 @@
     <ClCompile Include="CW1-TypingTestAdventureGame.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="Negative.txt" />
+    <Text Include="Positive.txt" />
     <Text Include="Start.txt" />
     <Text Include="Story.txt" />
   </ItemGroup>

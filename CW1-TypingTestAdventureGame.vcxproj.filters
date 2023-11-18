@@ -26,6 +26,12 @@
     <Text Include="Start.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="Positive.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Negative.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Typing.h">

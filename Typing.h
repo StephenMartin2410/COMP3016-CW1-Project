@@ -10,15 +10,16 @@ class GameInstance {
 
 private:
 
-	bool start = false;
 	char currentInput;
 	int storyLine = 0;
 	int score = 0;
+	float scorePercent = 0.0f;
 	string line;
 	string typingLine;
 	
 public:
 
+	bool start = false;
 	bool endGame = 0;
 	void rules() {
 		if (start == true) {
@@ -40,6 +41,16 @@ public:
 				start = true;
 			}
 		}
+		else {
+			cout << "\n\n\n" << "Press Enter To Continue: " << endl;
+			currentInput = _getch();
+			if (currentInput == '\r') {
+
+			}
+			else {
+				startGame();
+			}
+		}
 
 		return 0;
 	}
@@ -50,7 +61,9 @@ public:
 		int linenumber = 0;
 		system("cls");
 		rules();
-		cout << "\n\n" << "Your score is: " << score << "\n\n";
+		//cout << "\n\n" << "Your score is: " << (int)scorePercent  << "%" << "\n\n";
+		scorePercent = 0.0f;
+		score = 0;
 		cout << "Type out the following line: " << "\n\n";
 		while (getline(storyFile, line)) {
 			
@@ -93,10 +106,42 @@ public:
 				cout << currentInput;
 			}
 		}
+		scorePercent = ((float)score / (float)typingLine.length()) * 100;
 		scoreCheck.clear();
 		return 0;
 	}
 	
+	
+	int Decision() {
+		ifstream positive("Positive.txt");
+		ifstream negative("Negative.txt");
+		int decisionNum = 0;
+		string decisionLine;
+		cout << "\n\n" << "Your score is: " << (int)scorePercent << "%" << "\n\n";
+		if (scorePercent > 80) {
+			while (getline(positive, decisionLine)) {
+
+				if (decisionNum == storyLine - 1) {
+					cout << endl << decisionLine << endl;
+				}
+				decisionNum++;
+			}
+		}
+		else {
+
+			while (getline(negative, decisionLine)) {
+
+				if (decisionNum == storyLine - 1) {
+					cout << endl << decisionLine << endl;
+				}
+				decisionNum++;
+			}
+		}
+
+
+
+		return 0;
+	}
 
 
 };

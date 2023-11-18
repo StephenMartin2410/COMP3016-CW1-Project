@@ -26,11 +26,14 @@ int main()
     startFile.close();
     GameInstance startGame;
     while (1) {
+
         startGame.startGame();
-        startGame.outputStory();
-        startGame.typeTest();
 
-
+        if (startGame.start == true) {
+            startGame.outputStory();
+            startGame.typeTest();
+            startGame.Decision();
+        }
 
 
         //startGame.endGame = true;
