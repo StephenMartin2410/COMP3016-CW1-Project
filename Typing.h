@@ -13,6 +13,8 @@ private:
 	char currentInput;
 	int storyLine = 0;
 	int score = 0;
+	int playerHealth = 10;
+	int playerDamage;
 	float scorePercent = 0.0f;
 	string line;
 	string typingLine;
@@ -35,7 +37,7 @@ public:
 	}
 
 	int startGame() {
-		if (start == false) {
+		if (start == false && endGame == false) {
 			currentInput = _getch();
 			if (currentInput == ' ') {
 				start = true;
@@ -73,8 +75,12 @@ public:
 			}
 			 linenumber++;
 		}
-
 		storyLine++;
+		if (linenumber == storyLine) {
+			cout << endl << "Congrats on finishing the game, I hope you enjoyed it. :) Don't forget to go back and try the negative outcomes as well." << endl;
+			endGame = true;
+		}
+		
 		return 0;
 	}
 
@@ -134,6 +140,28 @@ public:
 					cout << endl << decisionLine << endl;
 				}
 				decisionNum++;
+			}
+			if ((int)scorePercent > 90) {
+				playerDamage = 1;
+			}
+			else if ((int)scorePercent > 70) {
+				playerDamage = 2;
+			}
+			else if ((int)scorePercent > 50) {
+				playerDamage = 4;
+			}
+			else if ((int)scorePercent > 30) {
+				playerDamage = 6;
+			}
+			else if ((int)scorePercent <= 30) {
+				playerDamage = 10;
+			}
+			//playerDamage = 0;
+			playerHealth = playerHealth - playerDamage;
+			cout << endl << "You lost " << playerDamage << " health" << endl << "Player health = " << playerHealth << "\n\n";
+			if (playerHealth <= 0) {
+				endGame = true;
+				cout << endl << "Congratulations, you had an awful day and you died.";
 			}
 		}
 
