@@ -92,6 +92,9 @@ public:
 		}
 		for (int i = 0; i < typingLine.length(); i++) {
 			currentInput = _getch();
+			while (currentInput == '\r') {
+				currentInput = _getch();
+			}
 			if (typingLine[i] == currentInput) {
 				cout << currentInput;
 				if (scoreCheck[i] == false) {
