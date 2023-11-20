@@ -64,7 +64,7 @@ public:
 		//cout << "\n\n" << "Your score is: " << (int)scorePercent  << "%" << "\n\n";
 		scorePercent = 0.0f;
 		score = 0;
-		cout << "Type out the following line: " << "\n\n";
+		cout << "Type out the following line to completion: " << "\n\n";
 		while (getline(storyFile, line)) {
 			
 			if (storyLine == linenumber) {
@@ -92,7 +92,6 @@ public:
 					score++;
 					scoreCheck[i] = true;
 				}
-				//cout << score;
 			}
 			else if (currentInput == char(8)) {
 				i = i - 2;
@@ -118,7 +117,7 @@ public:
 		int decisionNum = 0;
 		string decisionLine;
 		cout << "\n\n" << "Your score is: " << (int)scorePercent << "%" << "\n\n";
-		if (scorePercent > 80) {
+		if (scorePercent > 95) {
 			while (getline(positive, decisionLine)) {
 
 				if (decisionNum == storyLine - 1) {
