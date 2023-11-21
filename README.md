@@ -22,5 +22,6 @@ This means that if a user wants to make their own story all they need to do is e
 - Positive.txt - Yes <br />
 - Negative.txt - No <br />
 ---
+## UML Diagram
 ![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/0a8f3f2f-f1b9-46f9-b669-187de03d582a)
 
