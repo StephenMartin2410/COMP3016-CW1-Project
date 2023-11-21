@@ -15,7 +15,7 @@ The game is made in a way that means the Start, Story, Positive and Negative fil
 This means that if a user wants to make their own story all they need to do is ensure that all the files have the same amount of lines and that each of the responses are single lines only.
 - The Story.txt file contains the list of lines the player is required to type out.
 - The Positive.txt file contains the list of positive responses to all the story lines, so for instance: line 1 of Positive will be outputted if you score well on Story line 1.
-- The Negative.txt file contains the list of negative responses to all the story lines, so for instance: line 1 of Negative will be outputted if you score poorly on Story line 1.
+- The Negative.txt file contains the list of negative responses to all the story lines, so for instance: line 1 of Negative will be outputted if you score poorly on Story line 1. <br />
 Story.txt - Did the user type this out correctly? <br />
 Positive.txt - Yes <br />
 Negative.txt - No <br />
