@@ -17,7 +17,7 @@ This means that if a user wants to make their own story all they need to do is e
 - The Positive.txt file contains the list of positive responses to all the story lines, so for instance: line 1 of Positive will be outputted if you score well on Story line 1.
 - The Negative.txt file contains the list of negative responses to all the story lines, so for instance: line 1 of Negative will be outputted if you score poorly on Story line 1.
 
-Story.txt - Did the user type this out correctly?
-Positive.txt - Yes
-Negative.txt - No
+- Story.txt - Did the user type this out correctly?
+- Positive.txt - Yes
+- Negative.txt - No
 
