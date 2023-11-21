@@ -36,6 +36,7 @@ If the file Story.txt is not opened in the program then the program will flag th
 If the file Positive.txt or Negative.txt are not opened in the program then the program will flag that this is an issue and exit the program.
 ![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/01938a55-7ead-428d-86af-fb25760d9609)
 
+
 ![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/c2955414-87a0-4e2f-adeb-63169beae2b0)
 
 
