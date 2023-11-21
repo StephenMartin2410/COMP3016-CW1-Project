@@ -26,5 +26,16 @@ This means that if a user wants to make their own story all they need to do is e
 ![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/0a8f3f2f-f1b9-46f9-b669-187de03d582a)
 ---
 ## Exception Handling and Test Cases
+- Loading Start.txt
+If the file Start.txt is not opened in the program then the program will flag that this is an issue and exit the program.
+![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/48278551-a887-4362-b948-dac6acab0214)
+- Loading Story.txt
+If the file Story.txt is not opened in the program then the program will flag that this is an issue and exit the program.
+![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/ab835174-c8e4-4002-84a1-b0de871875bc)
+- Loading Positive.txt and Negative.txt
+If the file Positive.txt or Negative.txt are not opened in the program then the program will flag that this is an issue and exit the program.
+![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/01938a55-7ead-428d-86af-fb25760d9609) ![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/c2955414-87a0-4e2f-adeb-63169beae2b0)
+
+
 
 
