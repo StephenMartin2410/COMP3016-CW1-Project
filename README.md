@@ -80,7 +80,10 @@ After extensive testing there were a number of things that would break the progr
 ![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/a52f4316-ae05-4e5e-8276-5b836d2efe68)
 
 
+Another issue with the program was that it would register an input whenever backspace was pressed instead of going back, this meant that backspace would be considered the next input and would mess up the games flow. The solution to this was making sure whenever the user inputted a backspace, to output a backspace and then override it with a space followed by another backspace, and then to take two iterations off the line iterator. This means that whenever the backspace is entered, it essentially ignores the backspace input and also overrides the input of the previous character.
 
+
+![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/0e6dcc30-3754-4ae0-90d2-c1250a0398dc)
 
 
 
