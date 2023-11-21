@@ -21,6 +21,6 @@ This means that if a user wants to make their own story all they need to do is e
 - Story.txt - Did the user type this out correctly? <br />
 - Positive.txt - Yes <br />
 - Negative.txt - No <br />
-Story.txt | Positive.txt | Negative.txt
-----------| -------------| ------------
-Correct?  | Yes!         | No!
+|Story.txt | Positive.txt | Negative.txt|
+|----------| -------------| ------------|
+|Correct?  | Yes!         | No!         |
