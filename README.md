@@ -50,6 +50,30 @@ If the file Negative.txt is not opened in the program then the program will flag
 
 
 ![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/9d2e7525-6168-47a8-8466-3df88bdd786c)
+- Testing output of story line
+
+
+![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/b8baba53-2f2b-43ab-a8d1-cf0a25434fae)
+- Testing output of positive outcome
+
+
+![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/4d1c8368-c970-4eb1-8ed7-3edc8223a8e1)
+- Testing output of negative outcome
+
+
+![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/14f9fd4b-bf45-4c93-bb97-9892786c342f)
+- Testing player death
+
+
+![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/e45227a4-ff5e-4d61-ac12-39f0a1bdd9ed)
+- Testing player winning
+
+
+![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/f41c969f-0f99-43c9-9f23-55bbc9f9b4df)
+
+
+
+
 
 
 
