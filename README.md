@@ -18,7 +18,9 @@ This means that if a user wants to make their own story all they need to do is e
 - The Negative.txt file contains the list of negative responses to all the story lines, so for instance: line 1 of Negative will be outputted if you score poorly on Story line 1.
 
 
-Story.txt - Did the user type this out correctly? <br />
-Positive.txt - Yes <br />
-Negative.txt - No <br />
----
+- Story.txt - Did the user type this out correctly? <br />
+- Positive.txt - Yes <br />
+- Negative.txt - No <br />
+Story.txt | Positive.txt | Negative.txt
+---------- -------------- -------------
+Correct?  | Yes!         | No!
