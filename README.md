@@ -10,7 +10,7 @@
 4. Everytime you get a negative response you will lose health.
 5. Keep playing the game until you either reach the end or die.
 ---
-## Extra Feature
+## Extra Feature/Further Details
 The game is made in a way that means the Start, Story, Positive and Negative files are not fixed.
 This means that if a user wants to make their own story all they need to do is ensure that all the files have the same amount of lines and that each of the responses are single lines only.
 - The Story.txt file contains the list of lines the player is required to type out.
