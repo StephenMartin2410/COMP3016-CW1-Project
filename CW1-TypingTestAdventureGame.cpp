@@ -8,24 +8,37 @@ using namespace std;
 
 int main()
 {
-    string line;
     char exitInput = ' ';
-    ifstream startFile ("Start.txt");
-    if (startFile.is_open()) {
-        while (getline(startFile, line)) {
-            for (int i = 0; i < line.length(); i++) {
-                if (line[i] == '#') {
-                    cout << char(219);
-                }
-                else {
-                    cout << line[i];
-                }
-            }
-            cout << endl;
-        };
-    };
-    startFile.close();
+    string line;
     GameInstance startGame;
+    try {
+        ifstream startFile("Start.txt");
+        if (startFile.is_open()) {
+            while (getline(startFile, line)) {
+                for (int i = 0; i < line.length(); i++) {
+                    if (line[i] == '#') {
+                        cout << char(219);
+                    }
+                    else {
+                        cout << line[i];
+                    }
+                }
+                cout << endl;
+            };
+        };
+        startFile.close();
+        if (line == "") {
+            throw 404;
+        }
+    }
+    catch (...) {
+        cout << "Start File not found" << endl << "Please locate Start.txt and paste it into the file directory.";
+        cout << "\n" << "Press Enter To Exit: ";
+        while (exitInput != '\r') {
+            exitInput = _getch();
+        }
+        exit(0);
+    }
     while (1) {
 
         startGame.startGame();

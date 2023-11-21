@@ -22,7 +22,7 @@ private:
 	string typingLine;
 	
 public:
-
+	char exitInput = ' ';
 	bool start = false;
 	bool endGame = 0;
 	void rules() {
@@ -57,23 +57,36 @@ public:
 
 
 	int outputStory() {
-		ifstream storyFile("Story.txt");
-		linenumber = 0;
-		system("cls");
-		rules();
-		//cout << "\n\n" << "Your score is: " << (int)scorePercent  << "%" << "\n\n";
-		scorePercent = 0.0f;
-		score = 0;
-		cout << "Type out the following line to completion: " << "\n\n";
-		while (getline(storyFile, line)) {
-			
-			if (storyLine == linenumber) {
-				cout << line << endl;
-				typingLine = line;
+		try {
+			ifstream storyFile("Story.txt");
+			linenumber = 0;
+			system("cls");
+			rules();
+			//cout << "\n\n" << "Your score is: " << (int)scorePercent  << "%" << "\n\n";
+			scorePercent = 0.0f;
+			score = 0;
+			cout << "Type out the following line to completion: " << "\n\n";
+			while (getline(storyFile, line)) {
+
+				if (storyLine == linenumber) {
+					cout << line << endl;
+					typingLine = line;
+				}
+				linenumber++;
 			}
-			 linenumber++;
+			storyLine++;
+			if (line == "") {
+				throw 404;
+			}
 		}
-		storyLine++;
+		catch (...) {
+			cout << "Story File not found" << endl << "Please locate Story.txt and paste it into the file directory.";
+			cout << "\n" << "Press Enter To Exit: ";
+			while (exitInput != '\r') {
+				exitInput = _getch();
+			}
+			exit(0);
+		}
 		/*if (linenumber == storyLine) {
 			cout << endl << "Congrats on finishing the game, I hope you enjoyed it. :) Don't forget to go back and try the negative outcomes as well." << endl;
 			endGame = true;
@@ -125,22 +138,47 @@ public:
 		string decisionLine;
 		cout << "\n\n" << "Your score is: " << (int)scorePercent << "%" << "\n\n";
 		if (scorePercent > 98) {
-			while (getline(positive, decisionLine)) {
+			try {
+				while (getline(positive, decisionLine)) {
 
-				if (decisionNum == storyLine - 1) {
-					cout << endl << decisionLine << endl;
+					if (decisionNum == storyLine - 1) {
+						cout << endl << decisionLine << endl;
+					}
+					decisionNum++;
 				}
-				decisionNum++;
+				if (decisionLine == "") {
+					throw 404;
+				}
+			}
+			catch (...) {
+				cout << "Positive File not found" << endl << "Please locate Positive.txt and paste it into the file directory.";
+				cout << "\n" << "Press Enter To Exit: ";
+				while (exitInput != '\r') {
+					exitInput = _getch();
+				}
+				exit(0);
 			}
 		}
 		else {
+			try {
+				while (getline(negative, decisionLine)) {
 
-			while (getline(negative, decisionLine)) {
-
-				if (decisionNum == storyLine - 1) {
-					cout << endl << decisionLine << endl;
+					if (decisionNum == storyLine - 1) {
+						cout << endl << decisionLine << endl;
+					}
+					decisionNum++;
 				}
-				decisionNum++;
+				if (decisionLine == "") {
+					throw 404;
+				}
+			}
+			catch (...) {
+				cout << "Negative File not found" << endl << "Please locate Negative.txt and paste it into the file directory.";
+				cout << "\n" << "Press Enter To Exit: ";
+				while (exitInput != '\r') {
+					exitInput = _getch();
+				}
+				exit(0);
 			}
 			if ((int)scorePercent > 90) {
 				playerDamage = 1;
