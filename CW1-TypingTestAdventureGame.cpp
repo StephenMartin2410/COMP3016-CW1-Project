@@ -9,6 +9,7 @@ using namespace std;
 int main()
 {
     string line;
+    char exitInput = ' ';
     ifstream startFile ("Start.txt");
     if (startFile.is_open()) {
         while (getline(startFile, line)) {
@@ -38,7 +39,14 @@ int main()
 
         //startGame.endGame = true;
         if (startGame.endGame == true) {
+            cout << "\n" << "Press Enter To Exit: " ;
+            while (exitInput != '\r') {
+                exitInput = _getch();
+            }
             break;
+
+            
+            
         }
     }
 

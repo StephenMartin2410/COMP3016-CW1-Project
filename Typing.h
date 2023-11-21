@@ -15,7 +15,9 @@ private:
 	int score = 0;
 	int playerHealth = 10;
 	int playerDamage;
+	int linenumber;
 	float scorePercent = 0.0f;
+	int decisionNum;
 	string line;
 	string typingLine;
 	
@@ -45,12 +47,8 @@ public:
 		}
 		else {
 			cout << "\n\n\n" << "Press Enter To Continue: " << endl;
-			currentInput = _getch();
-			if (currentInput == '\r') {
-
-			}
-			else {
-				startGame();
+			while (currentInput != '\r') {
+				currentInput = _getch();
 			}
 		}
 
@@ -60,7 +58,7 @@ public:
 
 	int outputStory() {
 		ifstream storyFile("Story.txt");
-		int linenumber = 0;
+		linenumber = 0;
 		system("cls");
 		rules();
 		//cout << "\n\n" << "Your score is: " << (int)scorePercent  << "%" << "\n\n";
@@ -76,10 +74,10 @@ public:
 			 linenumber++;
 		}
 		storyLine++;
-		if (linenumber == storyLine) {
+		/*if (linenumber == storyLine) {
 			cout << endl << "Congrats on finishing the game, I hope you enjoyed it. :) Don't forget to go back and try the negative outcomes as well." << endl;
 			endGame = true;
-		}
+		}*/
 		
 		return 0;
 	}
@@ -123,10 +121,10 @@ public:
 	int Decision() {
 		ifstream positive("Positive.txt");
 		ifstream negative("Negative.txt");
-		int decisionNum = 0;
+		decisionNum = 0;
 		string decisionLine;
 		cout << "\n\n" << "Your score is: " << (int)scorePercent << "%" << "\n\n";
-		if (scorePercent > 95) {
+		if (scorePercent > 98) {
 			while (getline(positive, decisionLine)) {
 
 				if (decisionNum == storyLine - 1) {
@@ -159,7 +157,6 @@ public:
 			else if ((int)scorePercent <= 30) {
 				playerDamage = 10;
 			}
-			//playerDamage = 0;
 			playerHealth = playerHealth - playerDamage;
 			cout << endl << "You lost " << playerDamage << " health" << endl << "Player health = " << playerHealth << "\n\n";
 			if (playerHealth <= 0) {
@@ -167,7 +164,10 @@ public:
 				cout << endl << "Congratulations, you had an awful day and you died.";
 			}
 		}
-
+		if (linenumber == storyLine) {
+			cout << endl << "Congrats on finishing the game, I hope you enjoyed it. :) Don't forget to go back and try the negative outcomes as well." << endl;
+			endGame = true;
+		}
 
 
 		return 0;
