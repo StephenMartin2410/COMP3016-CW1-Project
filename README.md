@@ -86,7 +86,7 @@ Another issue with the program was that it would register an input whenever back
 ![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/0e6dcc30-3754-4ae0-90d2-c1250a0398dc)
 
 
-
+One remaining issue with the program is that whenever there is a long string of text outputted from a file, it may become split off as it touches the edge of the console application. This makes the text much harder to read and also harder to type. This could be solved by rewriting some of the code to make the output a constant string with line breaks instead of a continuous line or by simply adjusting the size of the console application.
 
 
 
