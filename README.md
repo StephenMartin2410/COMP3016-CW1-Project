@@ -72,6 +72,10 @@ If the file Negative.txt is not opened in the program then the program will flag
 
 
 ![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/f41c969f-0f99-43c9-9f23-55bbc9f9b4df)
+After extensive testing there were a number of things that would break the program. Such as the user pressing enter when typing in the typing test section, this would make the text cursor skip a line and mess up the input loop of getting the chars that the player is inputting. By putting the following code inside a while loop, it prevents the program from progressing unless the user inputs a key that is not enter.
+
+
+![image](https://github.com/StephenMartin2410/COMP3016-CW1-Project/assets/91669127/a52f4316-ae05-4e5e-8276-5b836d2efe68)
 
 
 
